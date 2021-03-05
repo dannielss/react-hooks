@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { UseReducer, UseRef, UseState } from './hooks';
+import { UseReducer, UseRef, UseState, UseEffect } from './hooks';
 
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <UseRef />
+    <UseEffect />
   </React.StrictMode>,
   document.getElementById('root')
 );
