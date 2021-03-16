@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { UseReducer, UseRef, UseState, UseEffect, UseCallback, UseMemo } from './hooks';
+import { UseReducer, UseRef, UseState, UseEffect, UseCallback, UseMemo, UseImperativeHandle } from './hooks';
 
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <UseMemo />
+    <UseImperativeHandle />
   </React.StrictMode>,
   document.getElementById('root')
 );
