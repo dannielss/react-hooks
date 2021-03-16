@@ -1,46 +1,129 @@
-# Getting Started with Create React App
+<h3 align="center">
+  <img src="https://user-images.githubusercontent.com/58083563/89603242-1845fa80-d83f-11ea-9ca1-3b6c3acb57ed.png" alt="Webpack" width="150" />&nbsp&nbsp&nbsp&nbsp
+  &nbsp
+  <img src="https://user-images.githubusercontent.com/58083563/89603440-87bbea00-d83f-11ea-88f1-40ded3561784.png" alt="Typescript" width="150" />
+  <img src="https://user-images.githubusercontent.com/58083563/89603314-3f9cc780-d83f-11ea-974a-82f2ed7ab879.png" alt="React" width="200" />
+</h3>
+<h3 align="center">Boilerplate - React + Typescript + Webpack</h3>
+<br>
+<p align="center">
+  <a href="#rocket-Hooks">Hooks</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#wrench-Configuration">Configuration</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## :rocket: Hooks
 
-## Available Scripts
+#### 1. useState
 
-In the project directory, you can run:
+```js
+const [state, setState] = useState();
+```
 
-### `yarn start`
+#### 2. useReducer
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```js
+const [state, dispatch] = useReducer(reducer, initialState)
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#### 3. useRef
 
-### `yarn test`
+```js
+const ref = useRef();
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### 4. useEffect
 
-### `yarn build`
+```js
+useEffect(() => {
+  console.log('Hello')
+}, [])
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### 5. useLayoutEffect
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```js
+useLayoutEffect(() => {
+  console.log('Hello')
+}, [])
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### 6. useCallback
 
-### `yarn eject`
+```js
+const handleIncrement1 = useCallback(() => {
+  setCount1(count1 + 1);
+}, [count1])
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### 7. useMemo
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```js
+const slowFunction = useMemo(() => {
+  for(let i = 0; i < 10 ** 9; i+= 1) {
+    i += 1;
+    i -=1;
+  }
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+  if(count1 % 2 == 0) {
+    return 'red';
+  }
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+  if(count1 % 3 == 0) {
+    return 'blue';
+  }
 
-## Learn More
+  if(count1 % 4 == 0) {
+    return 'green'
+  }
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  return 'orange'
+}, [count1])
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### 8. useImperativeHandle
+
+```js
+useImperativeHandle(ref, () => {
+    return {
+        name: 'Daniel'
+    }
+})
+```
+
+#### 9. useDebugValue
+
+```js
+const useCustomHook = () => {
+  const [hook, setHook] = useState(true);
+
+  useDebugValue(hook ? 'True' : 'False');
+
+  return hook;
+}
+```
+
+## :wrench: Configuration
+
+#### 1. Install all dependencies with
+
+```sh
+$ npm install 
+```
+
+or using yarn
+
+```sh
+$ yarn
+```
+
+#### 2. Start the dev server
+
+```sh
+$ npm start
+```
+
+or using yarn
+
+```sh
+$ yarn start
+```
