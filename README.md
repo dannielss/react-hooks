@@ -8,7 +8,7 @@
 <br>
 <p align="center">
   <a href="#rocket-Hooks">Hooks</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#wrench-Configuration">Configuration</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#wrench-Configuration">Configuration</a>&nbsp;&nbsp;&nbsp;
 </p>
 
 ## :rocket: Hooks
