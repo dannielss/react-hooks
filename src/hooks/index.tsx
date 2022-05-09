@@ -7,3 +7,4 @@ export { default as UseMemo } from './UseMemo';
 export { default as UseImperativeHandle } from './UseImperativeHandle';
 export { default as UseLayoutEffect } from './UseLayoutEffect';
 export { default as UseDebugValue } from './UseDebugValue';
+export { default as UseId } from './UseId';

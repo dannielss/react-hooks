@@ -1,12 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { UseReducer, UseRef, UseState, UseEffect, UseCallback, UseMemo, UseImperativeHandle, UseLayoutEffect, UseDebugValue } from './hooks';
+import { 
+  UseReducer,
+  UseRef,
+  UseState,
+  UseEffect, 
+  UseCallback, 
+  UseMemo, 
+  UseImperativeHandle, 
+  UseLayoutEffect, 
+  UseDebugValue, 
+  UseId 
+} from './hooks';
 
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <UseDebugValue />
+    <UseId />
   </React.StrictMode>,
   document.getElementById('root')
 );
