@@ -10,16 +10,21 @@ import {
   UseImperativeHandle, 
   UseLayoutEffect, 
   UseDebugValue, 
-  UseId 
+  UseId,
+  UseTransition,
+  UseDeferredValue
 } from './hooks';
+import { createRoot } from 'react-dom/client';
 
 import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
+const container = document.getElementById('root') as HTMLElement;
+const root = createRoot(container);
+
+root.render(
   <React.StrictMode>
-    <UseId />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <UseDeferredValue />
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
